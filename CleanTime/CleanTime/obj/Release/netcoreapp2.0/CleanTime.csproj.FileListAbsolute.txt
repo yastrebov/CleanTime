@@ -1,0 +1,12 @@
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\bin\Release\netcoreapp2.0\CleanTime.deps.json
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\bin\Release\netcoreapp2.0\CleanTime.runtimeconfig.json
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\bin\Release\netcoreapp2.0\CleanTime.runtimeconfig.dev.json
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\bin\Release\netcoreapp2.0\CleanTime.dll
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\bin\Release\netcoreapp2.0\CleanTime.pdb
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.csproj.CoreCompileInputs.cache
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.AssemblyInfoInputs.cache
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.AssemblyInfo.cs
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.dll
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.pdb
+C:\Users\yastr\Google Drive\My Program\GitHub\CleanTime\CleanTime\CleanTime\obj\Release\netcoreapp2.0\CleanTime.csprojResolveAssemblyReference.cache
