@@ -1,0 +1,413 @@
+﻿
+/* -------------------------------------------------------------- */
+/* common */
+/* -------------------------------------------------------------- */
+
+#container {
+    min-width: 320px;
+}
+
+.centered {
+    padding: 0 20px;
+    width: auto;
+    max-width: 1200px;
+}
+
+@media screen and (max-width: 950px) {
+    #container {
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    .header-nav, .header-btn {
+        display: none;
+    }
+
+    .header-toggle {
+        display: inline-block;
+        line-height: 2em;
+        font-size: 1.3em;
+        font-weight: bold;
+        float: right;
+    }
+
+    a.phone {
+        background-image: url(../images/call.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: left;
+        width: 38px;
+        height: 38px;
+    }
+
+    #content, #content-inner, #content-right {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+
+    #content-right {
+        margin-top: 40px;
+    }
+
+    .footer-part1-col1, .footer-part1-col2, .footer-part2-col1, .footer-part2-col2 {
+        float: none;
+        margin: 0;
+        width: auto;
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-bottom: 20px;
+    }
+
+    .footer-nav2 {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-nav1 ul {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-nav1 a {
+        display: inline;
+        padding-left: 0;
+        background: none;
+    }
+
+    .footer-nav2 li {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-title2 span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .fancybox-wrap.popup-style1 form {
+        padding: 15px 30px 20px;
+        width: 200px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* home */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 1050px) {
+    .block-home-text .title {
+        font-size: 2.2em;
+    }
+
+    .block-home-text .text {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #content-home-right, #content-home-left {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+
+    .block-home-text, .block-home-advantages {
+        text-align: center;
+    }
+
+        .block-home-text .title:after {
+            left: 50%;
+            margin-left: -30px;
+        }
+
+        .block-home-advantages .items {
+            margin: 0;
+            text-align: center;
+            white-space: normal;
+        }
+}
+
+@media screen and (max-width: 430px) {
+    .block-home-form .block-style1-part1 {
+        padding: 25px 30px;
+    }
+
+    .block-home-form .block-style1-part2 {
+        padding: 25px 30px;
+    }
+
+    .block-home-form button {
+        font-size: 0.9em;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* order */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 1140px) {
+    #form-order-step2 .switcher label {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .block-order-result {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #form-order-step2 .col {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+
+    #form-order-step2 .form-title-empty {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #form-order-step2 .switcher label {
+        width: 100%;
+    }
+
+    #form-order-step3 .col {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* cleaners and orders */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 1180px) {
+    .list-cleaners .item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .list-cleaners .item {
+        width: 33.333333%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .list-cleaners .item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .list-cleaners .item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .list-orders .item .date, .list-orders .item .info, .list-orders .item .cleaner, .list-orders .item .options {
+        width: 100%;
+    }
+
+    .list-orders .item .date {
+        text-align: left;
+    }
+
+        .list-orders .item .date strong {
+            display: inline;
+        }
+
+    .list-orders .item .info {
+        padding: 10px 0 8px;
+    }
+
+        .list-orders .item .info .number {
+            margin-bottom: 8px;
+        }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-style1 {
+        margin: 20px 0 -20px;
+        padding: 10px 0 5px;
+    }
+
+        .nav-style1 li {
+            display: block;
+        }
+
+            .nav-style1 li a {
+                display: inline-block;
+                padding: 10px;
+                border-bottom: none;
+            }
+
+    .block-review-part1 .photo {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .block-review-part1 .info {
+        margin: 0;
+        text-align: center;
+    }
+
+    .block-review-part2 .stars {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .block-review-part2 .stars {
+        font-size: 2.4em;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* user settings */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 500px) {
+    #form-user-settings1 .col {
+        margin: 0;
+        float: none;
+        width: auto;
+    }
+
+    #form-pay-add .col {
+        float: none;
+        margin: 0;
+        width: auto;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* about */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 830px) {
+    .block-about-icons .item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .block-about-contacts .social, .block-about-contacts .contacts {
+        float: none;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .block-about-icons .item {
+        float: none;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .block-about-people .title, .block-about-contacts .title {
+        font-size: 1.6em;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* faq */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+    .block-faq-list .item {
+        float: none;
+        width: auto;
+    }
+}
+
+/* -------------------------------------------------------------- */
+/* invite */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 700px) {
+    .block-invite-top {
+        padding: 40px 20px;
+        min-height: inherit;
+    }
+
+        .block-invite-top .text {
+            position: static;
+            margin: 0;
+            font-size: 1.4em;
+        }
+
+            .block-invite-top .text br {
+                display: none;
+            }
+}
+
+/* -------------------------------------------------------------- */
+/* work */
+/* -------------------------------------------------------------- */
+
+@media screen and (max-width: 1070px) {
+    .block-work-form {
+        padding-left: 60px;
+        background-image: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .block-work-form .title br {
+        display: none;
+    }
+
+    .block-work-form .col {
+        float: none;
+        width: auto;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .block-work-form {
+        padding: 30px;
+    }
+
+        .block-work-form .title {
+            font-size: 1.6em;
+        }
+
+        .block-work-form .text {
+            font-size: 1em;
+        }
+}
+
+@media screen and (max-width: 460px) {
+    .block-work-cleaners .title {
+        font-size: 1.6em;
+    }
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+.list-orders .item .options ul {
+    list-style: circle;
+    margin-left: 20px;
+}

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CleanTime</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic" rel="stylesheet">
+
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="js/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="js/pickmeup/pickmeup.css" rel="stylesheet">
+    <link href="js/customradiocheck/customradiocheck.css" rel="stylesheet">
+    <link href="js/slidebars/slidebars.min.css" rel="stylesheet">
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/pickmeup/jquery.pickmeup.min.js"></script>
+    <script src="js/customradiocheck/customradiocheck.js"></script>
+    <script src="js/slidebars/slidebars.min.js"></script>
+    <script src="js/maskedinput/jquery.maskedinput.min.js"></script>
+    
+
+</head>
+<body>
+
+
+    <div id="container">
+        @{await Html.RenderPartialAsync("_Header");}
+        <div id="middle">
+            @RenderBody()
+        </div>
+    </div>
+
+    @{await Html.RenderPartialAsync("_Footer");}
+    <script src="http://clean4u.ru/public/js/slidebars/slidebars.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

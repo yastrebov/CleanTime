@@ -1,0 +1,914 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<script src="js/script-about.js"></script>
+<script type="text/javascript" src="js/calculator-3.js"></script>
+<script type="text/javascript" src="js/jquery-masked-input-plugin.js"></script>
+
+<div class="centered">
+
+    <form action="" id="form-order-step2" method="post">
+        <input class="js-input-space_type" type="hidden" name="order[space_type]" value="">
+        <input type="hidden" name="_token" value="p7reaSK7s7216CaNbUQ9gX4utov7LZITc7yzoL4I">
+        <div id="content">
+            <div id="content-inner">
+
+                <div class="block-order-bar">
+                    <div class="step step1 prev">
+                        <div class="number">1</div>
+                    </div>
+                    <div class="step step2 active">
+                        <div class="number">2</div>
+                        <div class="text">Оформление заказа</div>
+                    </div>
+                    <div class="step step3">
+                        <div class="number">3</div>
+                        <div class="text">Оплата</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="block-style3">
+                    <div class="form-title">Тип уборки</div>
+
+                    <div class="form-field">
+                        <div class="switcher switcher-33">
+                            <input class="js-cleaning-type__evet-change" id="zname1" type="radio" name="order[cleaning_type]" value="supporting" checked="checked" /> <label for="zname1"><span>Поддерживающая</span></label>
+                            <input class="js-cleaning-type__evet-change" id="zname2" type="radio" name="order[cleaning_type]" value="general" /> <label for="zname2"><span>Генеральная уборка</span></label>
+                            <input class="js-cleaning-type__evet-change" id="zname3" type="radio" name="order[cleaning_type]" value="after_construction" /> <label for="zname3"><span>Уборка после строительства</span></label>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-style3">
+
+                    <div class="row no-mrg">
+                        <div class="col col-6">
+                            <div class="form-title">Тип помещения</div>
+                            <div class="form-field">
+                                <div class="form-control-wrapper">
+                                    <div class="form-select">
+                                        <select class="form-control js-space-type js-type__event-change" name="order[space_type]" required>
+                                            <option value="flat" selected>Квартира</option>
+                                            <option value="office">Офис</option>
+                                            <option value="other">Дом</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-6 js-health_block">
+                            <div class="form-title">Вариант уборки</div>
+                            <div class="form-field">
+                                <div class="form-control-wrapper">
+                                    <div class="form-select">
+                                        <select class="form-control js-health js-health__event-change" name="order[health_type]">
+                                            <option value="none" selected>Выбор</option>
+                                            <option value="healthy_baby">Здоровый малыш</option>
+                                            <option value="healthy_pet">Здоровый питомец</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="block-style3 none js-types js-flat">
+                    <div class="row no-mrg">
+                        <div class="col col-6">
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="form-title text-center">Комнат</div>
+                                    <div class="form-field">
+                                        <div class="form-control-wrapper dec-and-inc">
+                                            <span class="dec"><i class="fa fa-minus"></i></span>
+                                            <span class="inc"><i class="fa fa-plus"></i></span>
+                                            <input class="form-control js-flat__event-change" data-max="5" type="text" name="options[1]" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-6">
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="form-title text-center">Санузлов</div>
+                                    <div class="form-field">
+                                        <div class="form-control-wrapper dec-and-inc">
+                                            <span class="dec"><i class="fa fa-minus"></i></span>
+                                            <span class="inc"><i class="fa fa-plus"></i></span>
+                                            <input class="form-control js-bathrooms__event-change" data-max="5" type="text" name="options[2]" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="block-style3 js-types js-area">
+                    <div class="row no-mrg">
+                        <div class="col col-12">
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="form-title">Площадь</div>
+                                    <div class="form-field">
+                                        <div class="form-control-wrapper dec-and-inc">
+                                            <span class="dec"><i class="fa fa-minus"></i></span>
+                                            <span class="inc"><i class="fa fa-plus"></i></span>
+                                            <input class="form-control js-area__event-change" type="text" data-max="150" name="options[19]" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="block-style3">
+                    <div class="row no-mrg">
+                        <div class="col col-4">
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="form-title">Имя</div>
+                                    <div class="form-field">
+                                        <div class="form-control-wrapper">
+                                            <div class="form-control-wrapper">
+                                                <span class="form-placeholder normal" style="display: block;">Имя</span>
+                                                <span class="form-placeholder focused" style="display: none;">И.</span>
+                                                <input class="form-control text-right" type="text" name="user[name]" value=" ">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-8">
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="form-title">Телефон</div>
+                                    <div class="form-field">
+                                        <div class="form-control-wrapper">
+                                            <div class="form-control-wrapper">
+                                                <input id="phone" class="form-control" type="text" name="user[phone]" value="" placeholder="+7 (___) ___ - __ -__">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="block-style3">
+                    <div class="form-title" style="margin-top:20px;">Ваш адрес</div>
+
+
+
+                    <div class="form-field">
+                        <div class="form-control-wrapper">
+                            <div class="form-select">
+                                <select class="form-control input-address" name="address[id]">
+                                    <option value="0">Добавить другой адрес</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="form-order-step2-address" class="hidden">
+
+                        <div class="form-title" style="margin-top: 20px;">Адрес квартиры</div>
+
+                        <div class="row no-mrg">
+                            <div class="col col-12">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <div class="form-select">
+                                            <select class="form-control" name="address[city_id]">
+                                                <option value="1">Москва</option>
+                                                <option value="4">Апрелевка</option>
+                                                <option value="5">поселок городского типа Андреевка</option>
+                                                <option value="6">Балашиха</option>
+                                                <option value="7">коттеджный поселок Бристоль</option>
+                                                <option value="8">Видное</option>
+                                                <option value="9">Внуково</option>
+                                                <option value="10">Всеволожск</option>
+                                                <option value="11">поселок ВНИИССОК</option>
+                                                <option value="12">Голицыно</option>
+                                                <option value="13">поселок Газопровод</option>
+                                                <option value="14">Дзержинский</option>
+                                                <option value="15">Долгопрудный</option>
+                                                <option value="16">Домодедово</option>
+                                                <option value="17">Дрожжино</option>
+                                                <option value="18">Железнодорожный</option>
+                                                <option value="19">Жуковский</option>
+                                                <option value="20">Заречье</option>
+                                                <option value="21">Зеленоград</option>
+                                                <option value="22">поселок Заречье</option>
+                                                <option value="23">Ивантеевка</option>
+                                                <option value="24">Кокошкино</option>
+                                                <option value="25">Колпино</option>
+                                                <option value="26">Коммунар</option>
+                                                <option value="27">Королёв</option>
+                                                <option value="28">Котельники</option>
+                                                <option value="29">Красногорск</option>
+                                                <option value="30">Красное Село</option>
+                                                <option value="31">Кронштадт</option>
+                                                <option value="32">Кудрово</option>
+                                                <option value="33">посёлок Коммунарка</option>
+                                                <option value="34">Лобня</option>
+                                                <option value="35">Люберцы</option>
+                                                <option value="36">поселок совхоза им. Ленина</option>
+                                                <option value="37">Малаховка</option>
+                                                <option value="38">Молоково</option>
+                                                <option value="39">Московский</option>
+                                                <option value="40">Мосрентген</option>
+                                                <option value="41">Мытищи</option>
+                                                <option value="42">поселок Марьино</option>
+                                                <option value="43">поселок Мурино</option>
+                                                <option value="44">Нахабино</option>
+                                                <option value="45">Немчиновка</option>
+                                                <option value="46">Новое Девяткино</option>
+                                                <option value="47">Одинцово</option>
+                                                <option value="48">поселок Отрадное</option>
+                                                <option value="49">Павловск</option>
+                                                <option value="50">Парголово</option>
+                                                <option value="51">Подольск</option>
+                                                <option value="52">Путилково</option>
+                                                <option value="53">Пушкин</option>
+                                                <option value="54">Пушкино</option>
+                                                <option value="55">Пушкино </option>
+                                                <option value="56">Развилка</option>
+                                                <option value="57">Раменское</option>
+                                                <option value="58">Реутов</option>
+                                                <option value="59">Ромашково</option>
+                                                <option value="60">Стрельна</option>
+                                                <option value="61">Химки</option>
+                                                <option value="62">деревня Чёрная</option>
+                                                <option value="63">Шушары</option>
+                                                <option value="64">Щёлково</option>
+                                                <option value="65">Щербинка</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-12">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Улица</span>
+                                        <span class="form-placeholder focused">Ул.</span>
+                                        <input class="form-control text-right" type="text" name="address[street]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="row no-mrg">
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Дом</span>
+                                        <span class="form-placeholder focused">Д.</span>
+                                        <input class="form-control text-right" type="text" name="address[house]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Корпус</span>
+                                        <span class="form-placeholder focused">Корп.</span>
+                                        <input class="form-control text-right" type="text" name="address[housing]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Строение</span>
+                                        <span class="form-placeholder focused">Стр.</span>
+                                        <input class="form-control text-right" type="text" name="address[building]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Квартира</span>
+                                        <span class="form-placeholder focused">Кв.</span>
+                                        <input class="form-control text-right" type="text" name="address[apartment]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Подъезд</span>
+                                        <span class="form-placeholder focused">Под.</span>
+                                        <input class="form-control text-right" type="text" name="address[intercom]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col col-4">
+
+                                <div class="form-field">
+                                    <div class="form-control-wrapper">
+                                        <span class="form-placeholder normal">Домофон</span>
+                                        <span class="form-placeholder focused">Дмфн.</span>
+                                        <input class="form-control text-right" type="text" name="address[door]" value="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ВРЕМЯ -->
+
+                <div class="block-style3">
+
+                    <div class="form-title nowrap">Когда к Вам приехать</div>
+
+                    <div class="row no-mrg">
+                        <div class="col col-12">
+
+
+                            <div class="form-field">
+                                <div class="form-control-wrapper">
+                                    <input class="form-control input-date" type="text" name="order[cleaning_date]" value="" placeholder="Выберите день">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col col-12">
+
+                            <div class="form-field">
+                                <div class="form-control-wrapper">
+                                    <div class="form-select">
+                                        <select class="form-control" name="order[cleaning_time]">
+                                            <option value="7:00">7:00</option>
+                                            <option value="7:30">7:30</option>
+                                            <option value="8:00">8:00</option>
+                                            <option value="8:30">8:30</option>
+                                            <option value="9:00">9:00</option>
+                                            <option value="9:30">9:30</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="10:30">10:30</option>
+                                            <option value="11:00">11:00</option>
+                                            <option value="11:30">11:30</option>
+                                            <option value="12:00">12:00</option>
+                                            <option value="12:30">12:30</option>
+                                            <option value="13:00">13:00</option>
+                                            <option value="13:30">13:30</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="14:30">14:30</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="15:30">15:30</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="16:30">16:30</option>
+                                            <option value="17:00">17:00</option>
+                                            <option value="17:30">17:30</option>
+                                            <option value="18:00">18:00</option>
+                                            <option value="18:30">18:30</option>
+                                            <option value="19:00">19:00</option>
+                                            <option value="19:30">19:30</option>
+                                            <option value="20:00">20:00</option>
+                                            <option value="20:30">20:30</option>
+                                            <option value="21:00">21:00</option>
+                                            <option value="21:30">21:30</option>
+                                            <option value="22:00">22:00</option>
+                                            <option value="22:30">22:30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+
+                <!-- ЧАСТОТА УБОРКИ -->
+                <input type="hidden" name="order[frequency]" value="once" />
+                <div class="block-style3 js-discount">
+
+                    <div class="form-title2"><a href="http://clean4u.ru/public/regular" target="_blank"><img src="http://clean4u.ru/public/images/icon-info.png" alt=""> <span>Подробнее о регулярной уборке</span></a></div>
+
+                    <div class="form-title">Как часто нужно убираться?</div>
+
+                    <div class="form-field">
+                        <div class="switcher">
+                            <input id="name1" type="radio" name="order[frequency]" value="four_month" /> <label for="name1"><span>Раз в неделю 20%</span></label>
+                            <input id="name2" type="radio" name="order[frequency]" value="twice_month" /> <label for="name2"><span>Раз в две недели 15%</span></label>
+                            <input id="name3" type="radio" name="order[frequency]" value="once_month" /> <label for="name3"><span>Раз в месяц 10%</span></label>
+                            <input class="js-discount-single" id="name4" type="radio" name="order[frequency]" value="once" checked="checked" /> <label for="name4"><span>Один раз</span></label>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ УБОРКИ -->
+                <div class="block-style3 js-add_option">
+
+                    <div class="form-title2"><a href="http://clean4u.ru/public/options" target="_blank"><img src="http://clean4u.ru/public/images/icon-info.png" alt=""> <span>Подробнее о дополнительных опциях</span></a></div>
+
+                    <div class="form-title">Дополнительные опции</div>
+
+                    <div class="form-field">
+                        <div class="block-order-step2-options">
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base rooms" style="display: none !important;"
+                                 name="order[options][1][count]"
+                                 price="500"
+                                 duration="60"
+                                 value="0"
+                                 id="a1">
+                                <input type="hidden" name="order[options][1][count]" value="">
+                            </div>
+                            <div class="option js-base active bathrooms" style="display: none !important;"
+                                 name="order[options][2][count]"
+                                 price="500"
+                                 duration="40"
+                                 value="1"
+                                 id="a2">
+                                <input type="hidden" name="order[options][2][count]" value="1">
+                            </div>
+                            <div class="option js-nobase key"
+                                 data-popup="#form-order-step2-key"
+                                 name="order[options][3][count]"
+                                 price="300"
+                                 duration="60"
+                                 value="1"
+                                 id="a3"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][3][count]" value="">
+                                <div class="img img-key"></div>
+                                <div class="name">Доставить ключи</div>
+                            </div>
+                            <div class="option js-nobase refrigerator"
+                                 name="order[options][4][count]"
+                                 price="550"
+                                 duration="30"
+                                 value="1"
+                                 id="a4"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][4][count]" value="">
+                                <div class="img img-refrigerator"></div>
+                                <div class="name">Холодильник</div>
+                            </div>
+                            <div class="option js-nobase oven"
+                                 name="order[options][5][count]"
+                                 price="550"
+                                 duration="60"
+                                 value="1"
+                                 id="a5"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][5][count]" value="">
+                                <div class="img img-oven"></div>
+                                <div class="name">Духовка</div>
+                            </div>
+                            <div class="option js-nobase kitchen_cabinets"
+                                 name="order[options][6][count]"
+                                 price="600"
+                                 duration="60"
+                                 value="1"
+                                 id="a6"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][6][count]" value="">
+                                <div class="img img-kitchen_cabinets"></div>
+                                <div class="name">Внутри кухонных шкафов</div>
+                            </div>
+                            <div class="option js-nobase tableware"
+                                 name="order[options][7][count]"
+                                 price="300"
+                                 duration="60"
+                                 value="1"
+                                 id="a7"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][7][count]" value="">
+                                <div class="img img-tableware"></div>
+                                <div class="name">Помыть посуду</div>
+                            </div>
+                            <div class="option js-nobase microwave"
+                                 name="order[options][8][count]"
+                                 price="350"
+                                 duration="30"
+                                 value="1"
+                                 id="a8"
+                                 data-after=" ">
+
+                                <input type="hidden" name="order[options][8][count]" value="">
+                                <div class="img img-microwave"></div>
+                                <div class="name">Внутри микроволновки</div>
+                            </div>
+                            <div class="option js-nobase ironing"
+                                 name="order[options][9][count]"
+                                 price="600"
+                                 duration="60"
+                                 value="1"
+                                 id="a9"
+                                 data-after=" ч.">
+
+                                <input type="hidden" name="order[options][9][count]" value="">
+                                <div class="img img-ironing"></div>
+                                <div class="name">Глажка</div>
+                                <div class="dec-and-inc-outer">
+                                    <div class="dec-and-inc">
+                                        <span class="dec"><i class="fa fa-minus"></i></span>
+                                        <span class="inc"><i class="fa fa-plus"></i></span>
+                                        <input type="text" name="order[options][9][count]" value="" data-after=" ч.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option js-nobase windows"
+                                 name="order[options][10][count]"
+                                 price="350"
+                                 duration="30"
+                                 value="1"
+                                 id="a10"
+                                 data-after=" шт.">
+
+                                <input type="hidden" name="order[options][10][count]" value="">
+                                <div class="img img-windows"></div>
+                                <div class="name">Окна</div>
+                                <div class="dec-and-inc-outer">
+                                    <div class="dec-and-inc">
+                                        <span class="dec"><i class="fa fa-minus"></i></span>
+                                        <span class="inc"><i class="fa fa-plus"></i></span>
+                                        <input type="text" name="order[options][10][count]" value="" data-after=" шт.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option js-nobase balconies"
+                                 name="order[options][11][count]"
+                                 price="600"
+                                 duration="60"
+                                 value="1"
+                                 id="a11"
+                                 data-after=" шт.">
+
+                                <input type="hidden" name="order[options][11][count]" value="">
+                                <div class="img img-balconies"></div>
+                                <div class="name">Балконы</div>
+                                <div class="dec-and-inc-outer">
+                                    <div class="dec-and-inc">
+                                        <span class="dec"><i class="fa fa-minus"></i></span>
+                                        <span class="inc"><i class="fa fa-plus"></i></span>
+                                        <input type="text" name="order[options][11][count]" value="" data-after=" шт.">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base room1" style="display: none !important;"
+                                 name="order[options][13][count]"
+                                 price="1480"
+                                 duration="60"
+                                 value="0"
+                                 id="a13">
+                                <input type="hidden" name="order[options][13][count]" value="">
+                            </div>
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base room2" style="display: none !important;"
+                                 name="order[options][14][count]"
+                                 price="1980"
+                                 duration="120"
+                                 value="0"
+                                 id="a14">
+                                <input type="hidden" name="order[options][14][count]" value="">
+                            </div>
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base room3" style="display: none !important;"
+                                 name="order[options][15][count]"
+                                 price="2480"
+                                 duration="180"
+                                 value="0"
+                                 id="a15">
+                                <input type="hidden" name="order[options][15][count]" value="">
+                            </div>
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base room4" style="display: none !important;"
+                                 name="order[options][16][count]"
+                                 price="3180"
+                                 duration="240"
+                                 value="0"
+                                 id="a16">
+                                <input type="hidden" name="order[options][16][count]" value="">
+                            </div>
+                            <!-- rooms -->
+                            <div class="option js-rooms js-base room5" style="display: none !important;"
+                                 name="order[options][17][count]"
+                                 price="3480"
+                                 duration="300"
+                                 value="0"
+                                 id="a17">
+                                <input type="hidden" name="order[options][17][count]" value="">
+                            </div>
+                            <div class="option js-area_option active area" style="display: none !important;"
+                                 name="order[options][19][count]"
+                                 f="1"
+                                 duration="1"
+                                 value="0"
+                                 data-cleaningType=""
+                                 data-buildType=""
+                                 id="a19">
+                                <input class="js-area_input" type="hidden" name="order[options][19][count]" value="0">
+                                <input class="js-area_cleaning_price" type="hidden" name="cleaning_area_price" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-style3 js-add_comment">
+                    <div class="form-title">Комментарий</div>
+                    <div class="form-field">
+                        <div class="block-order-step2-options">
+                            <textarea name="order[user_comment]" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+
+        <div id="content-right">
+
+            <!-- ИНФОРМАЦИЯ ПО ЗАКАЗУ -->
+
+            <div class="block-style1 block-order-result">
+                <div class="block-style1-part1">
+
+                    <div class="title">
+                        Уборка
+                        <span class="js-title-what">квартиры</span>
+                        <br>
+                        <div class="js-rooms-counter">
+                            комнат: <span class="js-rooms-count">1</span>
+                            <br>
+                            ванн: <span class="js-bathrooms-count">1</span>
+                        </div>
+                        <div class="js-area-counter">
+                            кв. метров: <span class="js-area-count">0</span>
+                        </div>
+                    </div>
+
+                    <div class="part options">
+                        <strong>Дополнительно:</strong> <span id="additionally"></span>
+                    </div>
+
+                    <div class="part">
+                        <table>
+                            <tr>
+                                <td>Дата</td>
+                                <th><span id="cleaning_date"></span> <span id="cleaning_time"></span></th>
+                            </tr>
+                            <tr>
+                                <td>Время</td>
+                                <th>~ <span id="duration"></span> часа</th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="part">
+                        <table>
+                            <tr>
+                                <td>Стоимость</td>
+                                <th><span class="your_price"></span> р.</th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="part price">
+                        <span>К оплате</span>
+                        <strong class="your_price"></strong>
+                    </div>
+
+                </div>
+                <div class="block-style1-part2">
+
+                    <input class="btn btn-block" type="submit" formaction="http://clean4u.ru/public/order" value="Оплата наличными" />
+
+                </div>
+                <div class="block-style1-part2" style="padding-top:0px;">
+
+                    <p>В случае заказа уборки в Московскую область, стоимость уборки увеличивается на транспортные расходы из Москвы в Московскую область и обратно</p>
+
+                </div>
+            </div>
+
+            <!-- FAQ -->
+
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="hidden">
+            <div class="form" id="form-order-step2-key">
+
+                <div class="form-field">
+                    <label class="form-label">Куда доставить ключи?</label>
+                    <div class="form-control-wrapper">
+                        <textarea class="form-control" name="order[key_address_delivery]"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <button class="btn btn-block" onclick="$.fancybox.close();">Сохранить адрес</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hidden">
+            <div class="form" id="form-order-step2-remount">
+
+                <div class="form-field">
+                    <label class="form-label">Комментарий</label>
+                    <div class="form-control-wrapper">
+                        <textarea class="form-control" name="order[remount_comment]"></textarea>
+                    </div>
+                    <p style="font-size: 12px;">Мы с Вами свяжемся для уточнения деталей.</p>
+                </div>
+
+                <div class="form-field">
+                    <button class="btn btn-block" onclick="$.fancybox.close();">Сохранить комментарий</button>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+
+<div class="hidden">
+    <form action="#" class="form-order-step2-address" id="address">
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <select name="order[city_id]" class="form-control">
+                    <option value="1">Москва</option>
+                    <option value="4">Апрелевка</option>
+                    <option value="5">поселок городского типа Андреевка</option>
+                    <option value="6">Балашиха</option>
+                    <option value="7">коттеджный поселок Бристоль</option>
+                    <option value="8">Видное</option>
+                    <option value="9">Внуково</option>
+                    <option value="10">Всеволожск</option>
+                    <option value="11">поселок ВНИИССОК</option>
+                    <option value="12">Голицыно</option>
+                    <option value="13">поселок Газопровод</option>
+                    <option value="14">Дзержинский</option>
+                    <option value="15">Долгопрудный</option>
+                    <option value="16">Домодедово</option>
+                    <option value="17">Дрожжино</option>
+                    <option value="18">Железнодорожный</option>
+                    <option value="19">Жуковский</option>
+                    <option value="20">Заречье</option>
+                    <option value="21">Зеленоград</option>
+                    <option value="22">поселок Заречье</option>
+                    <option value="23">Ивантеевка</option>
+                    <option value="24">Кокошкино</option>
+                    <option value="25">Колпино</option>
+                    <option value="26">Коммунар</option>
+                    <option value="27">Королёв</option>
+                    <option value="28">Котельники</option>
+                    <option value="29">Красногорск</option>
+                    <option value="30">Красное Село</option>
+                    <option value="31">Кронштадт</option>
+                    <option value="32">Кудрово</option>
+                    <option value="33">посёлок Коммунарка</option>
+                    <option value="34">Лобня</option>
+                    <option value="35">Люберцы</option>
+                    <option value="36">поселок совхоза им. Ленина</option>
+                    <option value="37">Малаховка</option>
+                    <option value="38">Молоково</option>
+                    <option value="39">Московский</option>
+                    <option value="40">Мосрентген</option>
+                    <option value="41">Мытищи</option>
+                    <option value="42">поселок Марьино</option>
+                    <option value="43">поселок Мурино</option>
+                    <option value="44">Нахабино</option>
+                    <option value="45">Немчиновка</option>
+                    <option value="46">Новое Девяткино</option>
+                    <option value="47">Одинцово</option>
+                    <option value="48">поселок Отрадное</option>
+                    <option value="49">Павловск</option>
+                    <option value="50">Парголово</option>
+                    <option value="51">Подольск</option>
+                    <option value="52">Путилково</option>
+                    <option value="53">Пушкин</option>
+                    <option value="54">Пушкино</option>
+                    <option value="55">Пушкино </option>
+                    <option value="56">Развилка</option>
+                    <option value="57">Раменское</option>
+                    <option value="58">Реутов</option>
+                    <option value="59">Ромашково</option>
+                    <option value="60">Стрельна</option>
+                    <option value="61">Химки</option>
+                    <option value="62">деревня Чёрная</option>
+                    <option value="63">Шушары</option>
+                    <option value="64">Щёлково</option>
+                    <option value="65">Щербинка</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[street]" value="" placeholder="Улица">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[house]" value="" placeholder="Дом">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[housing]" value="" placeholder="Корпус">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[building]" value="" placeholder="Строение">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[apartment]" value="" placeholder="Квартира">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[door]" value="" placeholder="Подъезд">
+            </div>
+        </div>
+        <div class="form-field">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="text" name="order[intercom]" value="" placeholder="Домофон">
+            </div>
+        </div>
+        <div class="form-field">
+            <button class="btn btn-block">Добавить адрес</button>
+        </div>
+    </form>
+</div>
+
+<div class="hidden">
+    <form action="#" id="key" class="form-order-step2-key">
+        <div class="form-field">
+            <label class="form-label">Куда доставить ключи?</label>
+            <div class="form-control-wrapper">
+                <textarea class="form-control" name=""></textarea>
+            </div>
+        </div>
+        <div class="form-field">
+            <button class="btn btn-block">Сохранить адрес</button>
+        </div>
+    </form>
+</div>
+<script>
+    jQuery(function ($) {
+        $("#phone").mask("+7 (999) 999-99-99", { placeholder: "+7 (___) ___-__-__" });
+    });
+</script>
